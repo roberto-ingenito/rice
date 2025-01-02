@@ -1,0 +1,78 @@
+{
+    "position": "top", 
+    "height": 30, 
+
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "cpu", "memory", "pulseaudio", "battery", "tray"],
+
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format":"{icon}"
+    },
+
+    "sway/window": {
+        "format": "{}"
+    },
+
+    "clock": {
+        "format": "{:%a %d/%m/%Y - %H:%M}",
+    	"interval": 1
+    },
+    
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname} {bandwidthUpBits} {bandwidthDownBits}",
+        "format-linked": " (No IP) ",
+        "format-disconnected": "睊",
+        "interval": 1
+    },
+    
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": 1
+    },
+    
+    "memory": {
+        "format": "{percentage}% ",
+        "interval": 1
+    },
+    
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "ﱝ {icon} {format_source}",
+        "format-muted": "ﱝ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["奄", "奔", "墳"]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+        "tooltip-format": "{time}"
+    },
+    
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    }
+}
