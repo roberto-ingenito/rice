@@ -43,7 +43,7 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     0em;
-    padding:                     5em;
+    padding:                     3em 1.5em;
     children:                    [ "entry" ];
     background-color:            transparent;
 }
@@ -53,9 +53,9 @@ entry {
     spacing:                     1em;
     padding:                     1em;
     placeholder:                 "Cerca ...";
-    placeholder-color:           @dark-primary;
+    placeholder-color:           @dark-onPrimary;
     text-color:                  @dark-onPrimary;
-    background-color:            #000000aa;
+    background-color:            @dark-primary;
 }
 
 
@@ -65,7 +65,7 @@ listbox {
     spacing:                     0em;
     orientation:                 horizontal;
     children:                    [ "listview" , "mode-switcher" ];
-    background-color:            #000000aa;
+    background-color:            #000000cc;
 }
 listview {
     padding:                     1.5em;
@@ -98,8 +98,8 @@ mode-switcher {
 button {
     cursor:                      pointer;
     border-radius:               2em;
-    background-color:            @dark-onPrimary;
-    text-color:                  @dark-primary;
+    background-color:            @dark-secondaryContainer;
+    text-color:                  @dark-onSecondaryContainer;
 }
 button selected {
     background-color:            @dark-primary;
@@ -113,13 +113,13 @@ element {
     spacing:                     0em;
     padding:                     1em;
     cursor:                      pointer;
-    background-color:            #000000aa;
-    text-color:                  @dark-primary;
+    background-color:            @dark-secondaryContainer;
+    text-color:                  @dark-onSecondaryContainer;
     border-radius:               24px;
 }
 element selected.normal {
-    background-color:            @dark-onPrimary;
-    text-color:                  @dark-primary;
+    background-color:            @dark-primary;
+    text-color:                  @dark-onPrimary;
 
 }
 element-icon {
