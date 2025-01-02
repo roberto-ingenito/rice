@@ -17,6 +17,7 @@ fi
 yay swayfx wlogout-git
 
 sudo pacman -S --needed \
+    github-cli \
     swaylock \
     waybar \
     rofi \
@@ -46,6 +47,10 @@ mv theme.rasi ~/.config/rofi/
 mv colors.conf ~/.config/sway/
 mv colors.css ~/.config/waybar/
 popd # return to the previous directory
+
+git config --global user.email "ingenitoroby@gmail.com"
+git config --global user.name "Roberto"
+
 
 swaymsg reload
 
