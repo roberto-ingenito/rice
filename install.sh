@@ -18,10 +18,14 @@ sudo pacman -S --needed --noconfirm \
     brightnessctl \
     ttf-nerd-fonts-symbols \
     wget \
-    feh
+    feh \
+    lightdm lightdm-gtk-greeter
+
 
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
+
+sudo systemctl enable lightdm
 
 
 # Install legacy audio driver
@@ -70,3 +74,4 @@ git config --global user.email "ingenitoroby@gmail.com"
 git config --global user.name "Roberto Ingenito"
 
 echo "Installazione completata."
+echo "Riavvia il sistema per applicare le modifiche."
