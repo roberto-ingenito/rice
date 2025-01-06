@@ -10,6 +10,7 @@ sudo pacman -S --needed --noconfirm \
     xorg xorg-xinit \
     bspwm sxhkd \
     alsa-utils pulseaudio pulseaudio-alsa pavucontrol \
+    sof-firmware alsa-firmware alsa-ucm-conf \
     networkmanager \
     polybar \
     picom \
@@ -67,11 +68,20 @@ sudo pacman -S --needed --noconfirm \
     power-profiles-daemon \
     nodejs npm 
 
+# Add user to audio group
+sudo usermod -aG audio $USER
 
 cp -rf configs/* ~/.config/
 
 git config --global user.email "ingenitoroby@gmail.com"
 git config --global user.name "Roberto Ingenito"
+
+# Remove timeout from bootloader
+sudo sed -i 's/^timeout.*/timeout 0/' /boot/loader/loader.conf
+
+# Install fonts
+sudo cp ./configs/rofi/JetBrains-Mono-Nerd-Font-Complete.ttf /usr/share/fonts/
+fc-cache -fv
 
 echo "Installazione completata."
 echo "Riavvia il sistema per applicare le modifiche."
