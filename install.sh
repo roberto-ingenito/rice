@@ -81,6 +81,7 @@ sudo sed -i 's/^timeout.*/timeout 0/' /boot/loader/loader.conf
 
 # Install fonts
 sudo cp ./configs/rofi/JetBrains-Mono-Nerd-Font-Complete.ttf /usr/share/fonts/
+sudo cp ./configs/rofi/Icomoon-Feather.ttf /usr/share/fonts/
 fc-cache -fv
 
 echo "Installazione completata."
