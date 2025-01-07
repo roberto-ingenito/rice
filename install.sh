@@ -20,7 +20,8 @@ sudo pacman -S --needed --noconfirm \
     ttf-nerd-fonts-symbols \
     wget \
     feh \
-    lightdm lightdm-gtk-greeter
+    lightdm lightdm-gtk-greeter \
+    lxappearance
 
 
 sudo systemctl enable NetworkManager
@@ -84,5 +85,9 @@ sudo cp ./configs/rofi/JetBrains-Mono-Nerd-Font-Complete.ttf /usr/share/fonts/
 sudo cp ./configs/rofi/Icomoon-Feather.ttf /usr/share/fonts/
 fc-cache -fv
 
+# Install theme
+sudo tar -xJf Nordic.tar.xz -C /usr/share/themes/
+
 echo "Installazione completata."
+echo "Imposta il tema con lxappearance"
 echo "Riavvia il sistema per applicare le modifiche."
