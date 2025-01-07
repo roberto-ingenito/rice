@@ -45,6 +45,8 @@ else
     echo "yay è già installato, proseguo con il resto dell'installazione..."
 fi
 
+# Install AUR packages
+yay -S --rebuildall --rebuildtree --noconfirm visual-studio-code-bin
 
 # Install AMD GPU drivers
 sudo pacman -S --needed --noconfirm \
