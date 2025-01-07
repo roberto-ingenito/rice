@@ -16,17 +16,17 @@ configuration {
 * {
     /* Resolution : 1920x1080 */
     mainbox-spacing:             50px;
-    mainbox-margin:              0px 400px;
+    mainbox-margin:              0px 700px;
     message-margin:              0px 350px;
     message-padding:             15px;
     message-border-radius:       100%;
     listview-spacing:            25px;
-    element-padding:             45px 40px;
-    element-border-radius:       100%;
+    element-padding:             40px 20px;
+    element-border-radius:       32px;
 
     prompt-font:                 "Iosevka Nerd Font 32";
     textbox-font:                "Iosevka Nerd Font 12";
-    element-text-font:           "feather 48";
+    element-text-font:           "feather 32";
 
     background-normal:         #462D23;
     background-selected:       #E25F3E;
@@ -61,8 +61,8 @@ dummy {
 listview {
     enabled:                     true;
     expand:                      false;
-    columns:                     6;
-    lines:                       1;
+    columns:                     3;
+    lines:                       2;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
