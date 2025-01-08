@@ -46,7 +46,9 @@ else
 fi
 
 # Install AUR packages
-yay -S --rebuildall --rebuildtree --noconfirm visual-studio-code-bin
+yay -S --rebuildall --rebuildtree --noconfirm \
+    visual-studio-code-bin \
+    google-chrome
 
 # Install AMD GPU drivers
 sudo pacman -S --needed --noconfirm \
@@ -89,6 +91,7 @@ fc-cache -fv
 
 # Install theme
 sudo tar -xJf Nordic.tar.xz -C /usr/share/themes/
+
 
 echo "Installazione completata."
 echo "Imposta il tema con lxappearance"
