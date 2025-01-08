@@ -20,7 +20,7 @@ sudo pacman -S --needed --noconfirm \
     ttf-nerd-fonts-symbols \
     wget \
     feh \
-    lightdm lightdm-gtk-greeter \
+    lightdm lightdm-gtk-greeter lightdm-webkit2-greeter \
     lxappearance
 
 
@@ -28,6 +28,16 @@ sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 
 sudo systemctl enable lightdm
+
+# [NOT WORK] Set lighdm theme
+# mkdir -p glorious
+# mv theme.tar.gz glorious/
+# cd glorious
+# tar zxvf theme.tar.gz
+# mv theme.tar.gz ../
+# cd ..
+# sudo mv glorious/ /usr/share/lightdm-webkit/themes/
+# sudo sed -i 's/^webkit_theme.*/webkit_theme = glorious/' /etc/lightdm/lightdm-webkit2-greeter.conf
 
 
 # Install legacy audio driver
