@@ -26,6 +26,7 @@ sudo pacman -S --needed --noconfirm \
     wget \
     feh \
     sddm \
+    qt6 \
     lxappearance
 
 sudo systemctl enable sddm
