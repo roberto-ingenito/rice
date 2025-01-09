@@ -5,7 +5,7 @@
     ],
     "archinstall-language": "English",
     "audio_config": {
-        "audio": "No audio server"
+        "audio": "pulseaudio"
     },
     "bootloader": "Systemd-boot",
     "config_version": "3.0.1",
