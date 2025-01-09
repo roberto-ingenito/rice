@@ -5,14 +5,15 @@ sudo pacman -Syu
 
 
 # Install essential packages 
+# pulseaudio pulseaudio-alsa 
+# networkmanager network-manager-applet
 sudo pacman -S --needed --noconfirm \
     git \
     base-devel \
     xorg xorg-xinit \
     bspwm sxhkd \
-    alsa-utils pulseaudio pulseaudio-alsa pavucontrol \
+    alsa-utils pavucontrol \
     sof-firmware alsa-firmware alsa-ucm-conf \
-    networkmanager network-manager-applet \
     polybar \
     picom \
     dunst \
@@ -24,15 +25,11 @@ sudo pacman -S --needed --noconfirm \
     sddm \
     lxappearance
 
-
-sudo systemctl enable NetworkManager
-sudo systemctl start NetworkManager
-
 sudo systemctl enable sddm
 
 # Install sddm theme
 sudo pacman -S qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects qt5-svg breeze-gtk
-tar xJf Apple-Sequoia-v1.Plasma6.tar.gz
+tar xJf Apple-Sequoia-v1.Plasma6.tar.xz
 cd Apple-Sequoia-v1.Plasma6/
 sudo cp -r Apple-Sequoia-v1.Plasma6 /usr/share/sddm/themes/
 echo "[Theme]
@@ -106,10 +103,10 @@ sudo tar -xJf Nordic.tar.xz -C /usr/share/themes/
 
 
 # Disabilita iwd e abilita NetworkManager altrimenti si creano conflitti 
-sudo systemctl stop iwd
-sudo systemctl disable iwd
-sudo systemctl enable NetworkManager
-sudo systemctl start NetworkManager
+# sudo systemctl stop iwd
+# sudo systemctl disable iwd
+# sudo systemctl enable NetworkManager
+# sudo systemctl start NetworkManager
 
 
 # Set the swapfile for hibernation mode
