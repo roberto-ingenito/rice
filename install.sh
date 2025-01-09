@@ -29,15 +29,15 @@ sudo pacman -S --needed --noconfirm \
     qt6 \
     lxappearance
 
-sudo systemctl enable sddm
 
 # Install sddm theme
-sudo pacman -S qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects qt5-svg breeze-gtk
+sudo pacman -S --needed --noconfirmqt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects qt5-svg breeze-gtk
 tar xJf Apple-Sequoia-v1.Plasma6.tar.xz
 sudo mkdir -p /usr/share/sddm/themes/ && sudo cp -r Apple-Sequoia-v1.Plasma6 /usr/share/sddm/themes/
 echo "[Theme]
 Current=Apple-Sequoia-v1.Plasma6" | sudo tee /etc/sddm.conf > /dev/null
 rm -rf Apple-Sequoia-v1.Plasma6/
+sudo systemctl enable sddm
 
 
 # Install legacy audio driver
@@ -55,11 +55,13 @@ else
     echo "yay è già installato, proseguo con il resto dell'installazione..."
 fi
 
+
 # Install AUR packages
 yay -S --rebuildall --rebuildtree --noconfirm \
     visual-studio-code-bin \
     android-studio \
     google-chrome
+
 
 # Install AMD GPU drivers
 sudo pacman -S --needed --noconfirm \
@@ -84,24 +86,25 @@ sudo pacman -S --needed --noconfirm \
     power-profiles-daemon \
     nodejs npm 
 
+
 # Add user to audio group
 sudo usermod -aG audio $USER
 
-cp -rf configs/* ~/.config/
 
+# Set git user
 git config --global user.email "ingenitoroby@gmail.com"
 git config --global user.name "Roberto Ingenito"
 
+
 # Remove timeout from bootloader
 sudo sed -i 's/^timeout.*/timeout 0/' /boot/loader/loader.conf
+
 
 # Install fonts
 sudo cp ./configs/rofi/JetBrains-Mono-Nerd-Font-Complete.ttf /usr/share/fonts/
 sudo cp ./configs/rofi/Icomoon-Feather.ttf /usr/share/fonts/
 fc-cache -fv
 
-# Install theme
-sudo mkdir -p /usr/share/themes/ && sudo tar -xJf Nordic.tar.xz -C /usr/share/themes/
 
 # Set the swapfile for hibernation mode
 sudo fallocate -l 16G /swapfile
@@ -114,6 +117,11 @@ sudo mkinitcpio -P
 sudo filefrag -v /swapfile | awk '$1=="0:" {print substr($4, 1, length($4)-2)}' | sudo tee /sys/power/resume_offset > /dev/null
 sudo cp sleep.conf /etc/systemd/
 sudo cp logind.conf /etc/systemd/
+
+
+# Install dotfiles
+cp -rf configs/* ~/.config/
+
 
 echo "Installazione completata."
 echo "Imposta il tema con lxappearance"

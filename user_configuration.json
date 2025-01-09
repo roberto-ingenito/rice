@@ -5,7 +5,7 @@
     ],
     "archinstall-language": "English",
     "audio_config": {
-        "audio": "pulseaudio"
+        "audio": "pipewire"
     },
     "bootloader": "Systemd-boot",
     "config_version": "3.0.1",

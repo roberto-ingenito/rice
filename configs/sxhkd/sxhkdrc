@@ -79,7 +79,10 @@ XF86MonBrightnessDown
 
 # Volume
 XF86AudioRaiseVolume
-	amixer -D pulse sset Master 5%+
+	amixer -D pipewire sset Master 5%+
 
 XF86AudioLowerVolume
-	amixer -D pulse sset Master 5%-
+	amixer -D pipewire sset Master 5%-
+
+XF86AudioMute
+	amixer -D pipewire sset Master toggle
