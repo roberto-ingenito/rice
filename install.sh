@@ -7,7 +7,6 @@ sudo pacman -Syu
 
 
 # Install essential packages 
-# pulseaudio pulseaudio-alsa
 sudo pacman -S --needed --noconfirm \
     git \
     kitty \
@@ -26,7 +25,8 @@ sudo pacman -S --needed --noconfirm \
     wget \
     feh \
     sddm \
-    lxappearance
+    lxappearance \
+    libreoffice-fresh
 
 
 # Install sddm theme
