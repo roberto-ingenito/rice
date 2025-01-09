@@ -31,6 +31,7 @@ sudo systemctl start NetworkManager
 sudo systemctl enable sddm
 
 # Install sddm theme
+sudo pacman -S qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects qt5-svg breeze-gtk
 tar xJf Apple-Sequoia-v1.Plasma6.tar.gz
 cd Apple-Sequoia-v1.Plasma6/
 sudo cp -r Apple-Sequoia-v1.Plasma6 /usr/share/sddm/themes/
@@ -58,6 +59,7 @@ fi
 # Install AUR packages
 yay -S --rebuildall --rebuildtree --noconfirm \
     visual-studio-code-bin \
+    android-studio \
     google-chrome
 
 # Install AMD GPU drivers
