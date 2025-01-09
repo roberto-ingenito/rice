@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo sed -i 's/^#ParallelDownloads.*/ParallelDownloads = 10/' /etc/pacman.conf
+
 # Update system
 sudo pacman -Syu
 
