@@ -87,10 +87,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2
+    frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#74c69d"
+    frame_color = "#C6DAF1"
 
     # Define a color for the separator.
     # possible values are:
@@ -293,13 +293,13 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#282a36"
-    foreground = "#74c69d"
+    background = "#032B43"
+    foreground = "#C6DAF1"
     timeout = 10
 
 [urgency_normal]
-    background = "#282a36"
-    foreground = "#74c69d"
+    background = "#032B43"
+    foreground = "#C6DAF1"
     max_icon_size = 32
     timeout = 10
     default_icon = ~/.config/dunst/icons/notification.svg
