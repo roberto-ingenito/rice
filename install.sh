@@ -33,11 +33,9 @@ sudo systemctl enable sddm
 # Install sddm theme
 sudo pacman -S qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects qt5-svg breeze-gtk
 tar xJf Apple-Sequoia-v1.Plasma6.tar.xz
-cd Apple-Sequoia-v1.Plasma6/
 sudo mkdir -p /usr/share/sddm/themes/ && sudo cp -r Apple-Sequoia-v1.Plasma6 /usr/share/sddm/themes/
 echo "[Theme]
 Current=Apple-Sequoia-v1.Plasma6" | sudo tee /etc/sddm.conf > /dev/null
-cd ..
 rm -rf Apple-Sequoia-v1.Plasma6/
 
 
