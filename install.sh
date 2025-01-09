@@ -32,7 +32,7 @@ sudo pacman -S --needed --noconfirm \
 # Install sddm theme
 # qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects qt5-svg qt6
 sudo pacman -S --needed --noconfirm breeze-gtk kdeplasma-addons
-tar xJf Apple-Sequoia-v1.Plasma6.tar.xz
+tar -xzf Apple-Sequoia-v1.Plasma6.tar.gz
 sudo mkdir -p /usr/share/sddm/themes/ && sudo cp -r Apple-Sequoia-v1.Plasma6 /usr/share/sddm/themes/
 echo "[Theme]
 Current=Apple-Sequoia-v1.Plasma6" | sudo tee /etc/sddm.conf > /dev/null
