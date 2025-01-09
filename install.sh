@@ -12,6 +12,7 @@ sudo pacman -Syu
 sudo pacman -S --needed --noconfirm \
     git \
     kitty \
+    rofi \
     base-devel \
     xorg xorg-xinit \
     bspwm sxhkd \
