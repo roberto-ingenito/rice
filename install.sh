@@ -3,6 +3,7 @@
 # Update system
 sudo pacman -Syu
 
+
 # Install essential packages 
 sudo pacman -S --needed --noconfirm \
     git \
@@ -11,7 +12,7 @@ sudo pacman -S --needed --noconfirm \
     bspwm sxhkd \
     alsa-utils pulseaudio pulseaudio-alsa pavucontrol \
     sof-firmware alsa-firmware alsa-ucm-conf \
-    networkmanager \
+    networkmanager network-manager-applet \
     polybar \
     picom \
     dunst \
@@ -20,24 +21,23 @@ sudo pacman -S --needed --noconfirm \
     ttf-nerd-fonts-symbols \
     wget \
     feh \
-    lightdm lightdm-gtk-greeter lightdm-webkit2-greeter \
+    sddm \
     lxappearance
 
 
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 
-sudo systemctl enable lightdm
+sudo systemctl enable sddm
 
-# [NOT WORK] Set lighdm theme
-# mkdir -p glorious
-# mv theme.tar.gz glorious/
-# cd glorious
-# tar zxvf theme.tar.gz
-# mv theme.tar.gz ../
-# cd ..
-# sudo mv glorious/ /usr/share/lightdm-webkit/themes/
-# sudo sed -i 's/^webkit_theme.*/webkit_theme = glorious/' /etc/lightdm/lightdm-webkit2-greeter.conf
+# Install sddm theme
+tar xJf Apple-Sequoia-v1.Plasma6.tar.gz
+cd Apple-Sequoia-v1.Plasma6/
+sudo cp -r Apple-Sequoia-v1.Plasma6 /usr/share/sddm/themes/
+echo "[Theme]
+Current=Apple-Sequoia-v1.Plasma6" | sudo tee /etc/sddm.conf > /dev/null
+cd ..
+rm -rf Apple-Sequoia-v1.Plasma6/
 
 
 # Install legacy audio driver
@@ -101,6 +101,13 @@ fc-cache -fv
 
 # Install theme
 sudo tar -xJf Nordic.tar.xz -C /usr/share/themes/
+
+
+# Disabilita iwd e abilita NetworkManager altrimenti si creano conflitti 
+sudo systemctl stop iwd
+sudo systemctl disable iwd
+sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager
 
 
 # Set the swapfile for hibernation mode

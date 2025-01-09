@@ -7,7 +7,7 @@ bspc monitor -d 1 2 3 4 5
 
 # Imposta il bordo delle finestre
 bspc config border_width         3
-bspc config window_gap           12
+bspc config window_gap           8
 bspc config focused_border_color "#D74141"
 bspc config normal_border_color  "#650F0F"
 
