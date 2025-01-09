@@ -11,6 +11,7 @@ sudo pacman -Syu
 # networkmanager network-manager-applet
 sudo pacman -S --needed --noconfirm \
     git \
+    kitty \
     base-devel \
     xorg xorg-xinit \
     bspwm sxhkd \
