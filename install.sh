@@ -6,27 +6,27 @@ sudo sed -i 's/^#ParallelDownloads.*/ParallelDownloads = 10/' /etc/pacman.conf
 sudo pacman -Syu
 
 
-# Install essential packages 
+# Install packages 
 sudo pacman -S --needed --noconfirm \
-    git \
+    base-devel cmake ninja meson \
+    rofi polybar picom dunst feh sddm \
+    git github-cli \
+    power-profiles-daemon python-gobject gobject-introspection \
     kitty \
-    rofi \
-    base-devel \
     xorg xorg-xinit \
     bspwm sxhkd \
     alsa-utils pavucontrol \
     sof-firmware alsa-firmware alsa-ucm-conf \
-    polybar \
-    picom \
-    dunst \
     thunar gvfs \
     brightnessctl \
     ttf-nerd-fonts-symbols \
     wget \
-    feh \
-    sddm \
     lxappearance \
-    libreoffice-fresh
+    libreoffice-fresh \
+    nodejs npm
+
+
+sudo systemctl enable power-profiles-daemon
 
 
 # Install sddm theme
@@ -70,21 +70,7 @@ sudo pacman -S --needed --noconfirm \
     vulkan-radeon \
     lib32-vulkan-radeon \
     libva-mesa-driver \
-    libva-utils
-
-
-# Install build tools
-sudo pacman -S --needed --noconfirm \
-    cmake \
-    ninja \
-    meson
-
-
-# Install additional packages
-sudo pacman -S --needed --noconfirm \
-    github-cli \
-    power-profiles-daemon \
-    nodejs npm 
+    libva-utils 
 
 
 # Add user to audio group
