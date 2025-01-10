@@ -11,12 +11,9 @@
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu"
-theme='style'
 
 # CMDs
 lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
-uptime="`uptime -p | sed -e 's/up //g'`"
-host=`hostname`
 
 # Options
 hibernate=''
@@ -30,18 +27,14 @@ no=''
 
 # Rofi CMD
 rofi_cmd() {
-	rofi -dmenu \
-		-p " $USER" \
-		-mesg " Uptime: $uptime" \
-		-theme ${dir}/${theme}.rasi
+	rofi -dmenu -theme ${dir}/style.rasi
 }
 
 # Confirmation CMD
 confirm_cmd() {
 	rofi -dmenu \
-		-p 'Confirmation' \
 		-mesg 'Are you Sure?' \
-		-theme ${dir}/shared/confirm.rasi
+		-theme ${dir}/confirm.rasi
 }
 
 # Ask for confirmation
