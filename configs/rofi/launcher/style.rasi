@@ -17,7 +17,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    background:     #282828bb;
+    background:     #282828dd;
     background-alt: #353535ff;
     foreground:     #ffffffff;
     selected:       #6fa0c9ff;
