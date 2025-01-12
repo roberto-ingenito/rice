@@ -109,6 +109,15 @@ sudo cp logind.conf /etc/systemd/
 cp -rf configs/* ~/.config/
 
 
+# Set the shell to case-insensitive
+echo "bind \"set completion-ignore-case on\"" >> ~/.bashrc
+
+
+# Create directories and set default directory to ~/Documents for new terminal sessions
+mkdir -p ~/Downloads ~/Documents
+echo "cd ~/Documents" >> ~/.bashrc
+
+
 echo "Installazione completata."
 echo "Imposta il tema con lxappearance"
 echo "Riavvia il sistema per applicare le modifiche."
