@@ -90,11 +90,7 @@ case ${chosen} in
 		run_cmd --hibernate
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-		fi
+		~/.config/rofi/powermenu/lock.sh
         ;;
     $suspend)
 		run_cmd --suspend

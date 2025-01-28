@@ -60,7 +60,8 @@ fi
 yay -S --rebuildall --rebuildtree --noconfirm \
     visual-studio-code-bin \
     android-studio \
-    google-chrome
+    google-chrome \
+    i3lock-color
 
 
 # Install AMD GPU drivers
