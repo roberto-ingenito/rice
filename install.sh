@@ -1,12 +1,15 @@
 #!/bin/bash
 
+
+# set pacman to install packages in parallel
 sudo sed -i 's/^#ParallelDownloads.*/ParallelDownloads = 10/' /etc/pacman.conf
+
 
 # Update system
 sudo pacman -Syu
 
 
-# Install packages 
+# Install essential packages 
 sudo pacman -S --needed --noconfirm \
     base-devel cmake ninja meson \
     rofi polybar picom dunst feh sddm \
@@ -26,6 +29,7 @@ sudo pacman -S --needed --noconfirm \
     nodejs npm
 
 
+# Enable the Power Profile Daemon service to start automatically at boot time
 sudo systemctl enable power-profiles-daemon
 
 
@@ -117,6 +121,12 @@ echo "bind \"set completion-ignore-case on\"" >> ~/.bashrc
 # Create directories and set default directory to ~/Documents for new terminal sessions
 mkdir -p ~/Downloads ~/Documents
 echo "cd ~/Documents" >> ~/.bashrc
+
+
+read -p "Vuoi installare Flutter? [y/N] " install_flutter
+if [[ "$install_flutter" =~ ^[Yy]$ ]]; then
+    ./install_flutter.sh
+fi
 
 
 echo "Installazione completata."
