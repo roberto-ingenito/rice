@@ -127,6 +127,7 @@ echo "cd ~/Documents" >> ~/.bashrc
 
 ###### setup acpid functionality ##########
 sudo cp acpid_configs/powerbtn /etc/acpi/events/
+sudo cp acpid_configs/lid /etc/acpi/events/
 sudo cp acpid_configs/lock_and_action.sh /usr/local/bin/
 sudo cp acpid_configs/lock.sh /usr/local/bin/
 
