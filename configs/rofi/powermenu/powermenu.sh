@@ -56,11 +56,11 @@ run_cmd() {
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
 		elif [[ $1 == '--hibernate' ]]; then
-			systemctl hibernate
+			/usr/local/bin/lock_and_action.sh hibernate
 		elif [[ $1 == '--suspend' ]]; then
 			mpc -q pause
 			amixer set Master mute
-			systemctl suspend
+			/usr/local/bin/lock_and_action.sh suspend
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
@@ -90,7 +90,7 @@ case ${chosen} in
 		run_cmd --hibernate
         ;;
     $lock)
-		~/.config/rofi/powermenu/lock.sh
+		/usr/local/bin/lock.sh
         ;;
     $suspend)
 		run_cmd --suspend

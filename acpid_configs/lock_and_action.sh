@@ -1,10 +1,11 @@
 #!/bin/bash
 
+export USER=roberto
 export DISPLAY=:0
 export XAUTHORITY=$(ls -lt /tmp/xauth_* | grep " $USER " | head -n 1 | awk '{print $NF}')
 
 # Lancia i3lock
-~/.config/rofi/powermenu/lock.sh
+/usr/local/bin/lock.sh
 
 # Prendi input dal parametro dello script
 action=$1

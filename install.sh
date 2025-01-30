@@ -128,6 +128,7 @@ echo "cd ~/Documents" >> ~/.bashrc
 ###### setup acpid functionality ##########
 sudo cp acpid_configs/powerbtn /etc/acpi/events/
 sudo cp acpid_configs/lock_and_action.sh /usr/local/bin/
+sudo cp acpid_configs/lock.sh /usr/local/bin/
 
 # Add polkit rule to allow suspend and hibernate without sudo
 echo "polkit.addRule(function(action, subject) {
