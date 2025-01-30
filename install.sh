@@ -26,7 +26,8 @@ sudo pacman -S --needed --noconfirm \
     wget \
     lxappearance \
     libreoffice-fresh \
-    nodejs npm
+    nodejs npm \
+    acpid polkit
 
 
 # Enable the Power Profile Daemon service to start automatically at boot time
@@ -123,9 +124,36 @@ mkdir -p ~/Downloads ~/Documents
 echo "cd ~/Documents" >> ~/.bashrc
 
 
+
+###### setup acpid functionality ##########
+sudo cp acpid_configs/powerbtn /etc/acpi/events/
+sudo cp acpid_configs/lock_and_action.sh /usr/local/bin/
+
+# Add polkit rule to allow suspend and hibernate without sudo
+echo "polkit.addRule(function(action, subject) {
+    if (action.id == \"org.freedesktop.login1.suspend\" ||
+        action.id == \"org.freedesktop.login1.suspend-multiple-sessions\" ||
+        action.id == \"org.freedesktop.login1.hibernate\" ||
+        action.id == \"org.freedesktop.login1.hibernate-multiple-sessions\") {
+        return polkit.Result.YES;
+    }
+});" | sudo tee -a /etc/polkit-1/rules.d/50-allow-suspend.rules > /dev/null
+
+# Enable acpid and polkit services
+sudo systemctl enable acpid
+sudo systemctl enable polkit
+###########################################
+
+
 read -p "Vuoi installare Flutter? [y/N] " install_flutter
 if [[ "$install_flutter" =~ ^[Yy]$ ]]; then
     ./install_flutter.sh
+fi
+
+
+read -p "Vuoi installare LaTeX? [y/N] " install_latex
+if [[ "$install_latex" =~ ^[Yy]$ ]]; then
+    yay -S --rebuildall --rebuildtree --noconfirm texlive-full
 fi
 
 
