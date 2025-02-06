@@ -3,7 +3,6 @@
 yay -S --rebuildall --rebuildtree --noconfirm \
     flutter \
     dart \
-    android-tools \
     android-sdk \
     android-sdk-platform-tools \
     android-sdk-build-tools
