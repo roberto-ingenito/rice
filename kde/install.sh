@@ -94,4 +94,5 @@ fi
 
 
 echo "Installazione completata."
+echo "Imposta la foto di sfondo."
 echo "Riavvia il sistema per applicare le modifiche."
