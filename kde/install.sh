@@ -17,7 +17,9 @@ sudo pacman -S --needed --noconfirm \
     nodejs npm
 
 
-# Install yay
+#####################
+#### Install YAY ####
+#####################
 if ! command -v yay &> /dev/null; then
     git clone https://aur.archlinux.org/yay.git
     cd yay
@@ -27,6 +29,37 @@ if ! command -v yay &> /dev/null; then
 else
     echo "yay è già installato, proseguo con il resto dell'installazione..."
 fi
+#####################
+#### Install YAY ####
+#####################
+
+
+############################
+#### Install GPU driver ####
+############################
+echo "Seleziona il produttore della tua GPU:"
+echo "1) NVIDIA"
+echo "2) AMD"
+read -p "Inserisci il numero corrispondente (1/2): " choice
+
+if [[ "$choice" == "1" ]]; then
+    echo "Hai scelto NVIDIA. Installazione dei driver..."
+    sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
+elif [[ "$choice" == "2" ]]; then
+    echo "Hai scelto AMD. Installazione dei driver..."
+    sudo pacman -S --noconfirm \
+        mesa \
+        lib32-mesa \
+        vulkan-radeon \
+        lib32-vulkan-radeon \
+        libva-mesa-driver \
+        libva-utils 
+else
+    echo "Scelta non valida. Nessuna azione eseguita."
+fi
+############################
+#### Install GPU driver ####
+############################
 
 
 # Install AUR packages
@@ -40,10 +73,25 @@ git config --global user.email "ingenitoroby@gmail.com"
 git config --global user.name "Roberto Ingenito"
 
 
+############################
+#### Install KDE Plasma ####
+############################
+
+sudo pacman -S plasma # plasma group, with all base dependencies
+sudo pacman -S --noconfirm sddm # display manager
+sudo pacman -S --noconfirm xorg-xprop 
+
 # Install dotfiles
 cp -rf configs/* ~/.config/
 
+############################
+#### Install KDE Plasma ####
+############################
 
+
+#########################
+#### Install Flutter ####
+#########################
 read -p "Vuoi installare Flutter? [y/N] " install_flutter
 if [[ "$install_flutter" =~ ^[Yy]$ ]]; then
     sudo pacman -S --needed --noconfirm curl git unzip xz zip
@@ -85,8 +133,14 @@ if [[ "$install_flutter" =~ ^[Yy]$ ]]; then
     # accetta tutte le licenze di android
     yes | flutter doctor --android-licenses
 fi
+#########################
+#### Install Flutter ####
+#########################
 
 
+#######################
+#### Install LaTeX ####
+#######################
 read -p "Vuoi installare LaTeX? [y/N] " install_latex
 if [[ "$install_latex" =~ ^[Yy]$ ]]; then
     sudo pacman -S --needed --noconfirm \
@@ -100,8 +154,10 @@ if [[ "$install_latex" =~ ^[Yy]$ ]]; then
         texlive-mathscience \
         texlive-pictures
 fi
+#######################
+#### Install LaTeX ####
+#######################
 
 
 echo "Installazione completata."
-echo "Imposta la foto di sfondo."
-echo "Riavvia il sistema per applicare le modifiche."
+echo "Riavvia per applicare le modifiche."
