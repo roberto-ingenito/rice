@@ -79,7 +79,17 @@ git config --global user.name "Roberto Ingenito"
 
 sudo pacman -S plasma # plasma group, with all base dependencies
 sudo pacman -S --noconfirm sddm # display manager
-sudo pacman -S --noconfirm xorg-xprop 
+
+# tool per rimuovere l'ombra dai panel
+sudo pacman -S --needed --noconfirm xorg-xprop xdotool 
+mkdir -p ~/.config/autostart
+cp remove_panels_shadow.sh ~/.config/autostart
+echo -e "[Desktop Entry]
+Exec=$HOME/.config/remove_panels_shadow.sh
+Icon=application-x-shellscript
+Name=remove_panels_shadow.sh
+Type=Application
+X-KDE-AutostartScript=true" > ~/.config/autostart/script.sh.desktop
 
 # Install dotfiles
 cp -rf configs/* ~/.config/
