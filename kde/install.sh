@@ -79,6 +79,11 @@ git config --global user.name "Roberto Ingenito"
 
 sudo pacman -S plasma # plasma group, with all base dependencies
 sudo pacman -S --noconfirm sddm # display manager
+sudo systemctl enable sddm
+
+sudo pacman -S --noconfirm \
+    kde-system-meta \
+    kde-utilities-meta
 
 # tool per rimuovere l'ombra dai panel
 sudo pacman -S --needed --noconfirm xorg-xprop xdotool 
@@ -172,6 +177,11 @@ fi
 # wallpaper
 mkdir -p ~/.local/share/wallpapers/
 cp -f wallpaper.jpg ~/.local/share/wallpapers/
+
+
+# other packages
+sudo pacman -S --noconfirm \
+    freeoffice
 
 
 echo "Installazione completata."
