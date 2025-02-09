@@ -349,7 +349,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][75][Wallpaper][org.kde.image][General]
-Image=/home/roberto/Desktop/rice/kde/wallpaper.jpg
+Image=/home/roberto/.local/share/wallpapers/wallpaper.jpg
 
 [ScreenMapping]
 itemsOnDisabledScreens=

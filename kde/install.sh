@@ -169,6 +169,11 @@ fi
 #######################
 
 
+# wallpaper
+mkdir -p ~/.local/share/wallpapers/
+cp -f wallpaper.jpg ~/.local/share/wallpapers/
+
+
 echo "Installazione completata."
 echo "  - Imposta il teema Breeze-Dark"
 echo "  - Installa ed imposta il set di icone \"Papirus-Dark\""
