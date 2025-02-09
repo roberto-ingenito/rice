@@ -89,7 +89,16 @@ fi
 
 read -p "Vuoi installare LaTeX? [y/N] " install_latex
 if [[ "$install_latex" =~ ^[Yy]$ ]]; then
-    yay -S --rebuildall --rebuildtree --noconfirm texlive-full
+    sudo pacman -S --needed --noconfirm \
+        texlive-basic \
+        texlive-bibtexextra \
+        texlive-langenglish \
+        texlive-langitalian \
+        texlive-latex \
+        texlive-latexextra \
+        texlive-latexrecommended \
+        texlive-mathscience \
+        texlive-pictures
 fi
 
 
