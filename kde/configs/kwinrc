@@ -5,6 +5,7 @@ Rows=2
 
 [Effect-blur]
 BlurStrength=8
+NoiseStrength=0
 
 [Effect-magiclamp]
 AnimationDuration=300
@@ -17,16 +18,15 @@ MoveResize=77
 
 [Plugins]
 blurEnabled=true
+contrastEnabled=false
 fadedesktopEnabled=true
 glideEnabled[$d]
+magnifierEnabled=true
 slideEnabled=false
+zoomEnabled=false
 
 [Tiling]
 padding=4
 
 [Tiling][a7bccd33-ffa2-5d54-b4b3-463165c2219f]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[org.kde.kdecoration2]
-library=org.kde.breeze
-theme=Breeze

@@ -170,4 +170,6 @@ fi
 
 
 echo "Installazione completata."
+echo "  - Imposta il teema Breeze-Dark"
+echo "  - Installa ed imposta il set di icone \"Papirus-Dark\""
 echo "Riavvia per applicare le modifiche."
