@@ -1,0 +1,47 @@
+{
+    "additional-repositories": [
+        "multilib",
+        "testing"
+    ],
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Systemd-boot",
+    "config_version": "3.0.1",
+    "disk_encryption": null,
+    "hostname": "roberto-pc",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "it",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "mirror_config": null,
+    "network_config": {
+        "type": "iso"
+    },
+    "ntp": true,
+    "packages": [
+        "btop",
+        "nano",
+        "git"
+    ],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": null,
+        "greeter": null,
+        "profile": {
+            "custom_settings": {},
+            "details": [],
+            "main": "Minimal"
+        }
+    },
+    "save_config": null,
+    "swap": false,
+    "timezone": "Europe/Rome",
+    "uki": false,
+    "version": "3.0.1"
+}
