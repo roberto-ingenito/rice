@@ -65,7 +65,9 @@ fi
 # Install AUR packages
 yay -S --rebuildall --rebuildtree --noconfirm \
     visual-studio-code-bin \
-    google-chrome
+    google-chrome \
+    freeoffice \
+    plasma6-applets-panel-colorizer
     
 
 # Set git user
@@ -177,11 +179,6 @@ fi
 # wallpaper
 mkdir -p ~/.local/share/wallpapers/
 cp -f wallpaper.jpg ~/.local/share/wallpapers/
-
-
-# other packages
-sudo pacman -S --noconfirm \
-    freeoffice
 
 
 echo "Installazione completata."
