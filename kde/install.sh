@@ -14,7 +14,8 @@ sudo pacman -S --needed --noconfirm \
     base-devel cmake ninja meson \
     git github-cli \
     wget \
-    nodejs npm
+    nodejs npm \
+    papirus-icon-theme
 
 
 #####################
@@ -78,14 +79,6 @@ git config --global user.name "Roberto Ingenito"
 ############################
 #### Install KDE Plasma ####
 ############################
-
-sudo pacman -S plasma # plasma group, with all base dependencies
-sudo pacman -S --noconfirm sddm # display manager
-sudo systemctl enable sddm
-
-sudo pacman -S --noconfirm \
-    kde-system-meta \
-    kde-utilities-meta
 
 # tool per rimuovere l'ombra dai panel
 sudo pacman -S --needed --noconfirm xorg-xprop xdotool 
@@ -174,6 +167,10 @@ fi
 #######################
 #### Install LaTeX ####
 #######################
+
+
+# Remove timeout from bootloader
+sudo sed -i 's/^timeout.*/timeout 0/' /boot/loader/loader.conf
 
 
 # wallpaper
