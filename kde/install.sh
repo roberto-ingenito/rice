@@ -91,6 +91,10 @@ Name=remove_panels_shadow.sh
 Type=Application
 X-KDE-AutostartScript=true" > ~/.config/autostart/script.sh.desktop
 
+echo -e "[Greeter][Wallpaper][org.kde.image][General]
+Image=$HOME/.local/share/wallpapers/wallpaper.jpg
+PreviewImage=$HOME/.local/share/wallpapers/wallpaper.jpg" > ~/.config/kscreenlockerrc
+
 # Install dotfiles
 cp -rf configs/* ~/.config/
 

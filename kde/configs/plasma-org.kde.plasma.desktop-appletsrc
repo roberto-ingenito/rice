@@ -22,7 +22,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][2][Applets][4][Configuration][General]
-launchers=applications:org.kde.konsole.desktop,preferred://browser
+launchers=preferred://browser,applications:code.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.konsole.desktop
 showOnlyCurrentActivity=false
 showOnlyCurrentDesktop=false
 
@@ -65,7 +65,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][49][Applets][51][Configuration]
-PreloadWeight=70
+PreloadWeight=75
 SystrayContainmentId=52
 
 [Containments][49][Applets][68]
@@ -255,7 +255,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][52][Applets][55][Configuration]
-PreloadWeight=70
+PreloadWeight=75
 
 [Containments][52][Applets][55][Configuration][General]
 migrated=true
@@ -265,7 +265,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][52][Applets][56][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][52][Applets][57]
 immutability=1
@@ -303,7 +303,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][52][Applets][64][Configuration]
-PreloadWeight=95
+PreloadWeight=100
 
 [Containments][52][Applets][65]
 immutability=1
@@ -336,18 +336,3 @@ PreloadWeight=0
 [Containments][52][General]
 extraItems=org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.battery
 knownItems=org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.battery
-
-[Containments][75]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=842cb838-f066-4e28-b22d-fba628221638
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[ScreenMapping]
-itemsOnDisabledScreens=
-screenMapping=desktop:/rice,0,842cb838-f066-4e28-b22d-fba628221638
