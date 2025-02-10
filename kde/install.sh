@@ -160,6 +160,7 @@ read -p "Vuoi installare LaTeX? [y/N] " install_latex
 if [[ "$install_latex" =~ ^[Yy]$ ]]; then
     sudo pacman -S --needed --noconfirm \
         texlive-basic \
+        texlive-binextra \
         texlive-bibtexextra \
         texlive-langenglish \
         texlive-langitalian \
