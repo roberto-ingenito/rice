@@ -1,6 +1,7 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-842cb838-f066-4e28-b22d-fba628221638=none,none,Switch to activity "Default"
+switch-to-activity-d919a19a-79a0-46f0-b22b-a9c60815aef9=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,none,Switch to Last-Used Keyboard Layout
@@ -119,8 +120,8 @@ Walk Through Windows Alternative=Meta+Tab,,Walk Through Windows Alternative
 Walk Through Windows Alternative (Reverse)=Meta+Shift+Tab,,Walk Through Windows Alternative (Reverse)
 Walk Through Windows of Current Application=Alt+`,Alt+`,Walk Through Windows of Current Application
 Walk Through Windows of Current Application (Reverse)=Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)
-Walk Through Windows of Current Application Alternative=,,Walk Through Windows of Current Application Alternative
-Walk Through Windows of Current Application Alternative (Reverse)=,,Walk Through Windows of Current Application Alternative (Reverse)
+Walk Through Windows of Current Application Alternative=none,,Walk Through Windows of Current Application Alternative
+Walk Through Windows of Current Application Alternative (Reverse)=none,,Walk Through Windows of Current Application Alternative (Reverse)
 Window Above Other Windows=none,,Keep Window Above Others
 Window Below Other Windows=none,,Keep Window Below Others
 Window Close=Meta+Q\tAlt+F4,Alt+F4,Close Window

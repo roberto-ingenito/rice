@@ -68,7 +68,8 @@ yay -S --rebuildall --rebuildtree --noconfirm \
     visual-studio-code-bin \
     google-chrome \
     freeoffice \
-    plasma6-applets-panel-colorizer
+    plasma6-applets-panel-colorizer \
+    kwin-effect-rounded-corners-git
     
 
 # Set git user
