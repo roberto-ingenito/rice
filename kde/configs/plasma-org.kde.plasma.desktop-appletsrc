@@ -348,9 +348,6 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][75][Wallpaper][org.kde.image][General]
-Image=/home/roberto/.local/share/wallpapers/wallpaper.jpg
-
 [ScreenMapping]
 itemsOnDisabledScreens=
 screenMapping=desktop:/rice,0,842cb838-f066-4e28-b22d-fba628221638
