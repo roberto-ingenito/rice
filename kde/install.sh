@@ -15,7 +15,7 @@ sudo pacman -S --needed --noconfirm \
     git github-cli \
     wget \
     nodejs npm \
-    papirus-icon-theme
+    discord
 
 
 #####################
