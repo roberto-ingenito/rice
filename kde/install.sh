@@ -15,7 +15,8 @@ sudo pacman -S --needed --noconfirm \
     git github-cli \
     wget \
     nodejs npm \
-    discord
+    discord \
+    curl git unzip xz zip
 
 
 #####################
@@ -109,8 +110,6 @@ cp -rf configs/* ~/.config/
 #########################
 read -p "Vuoi installare Flutter? [y/N] " install_flutter
 if [[ "$install_flutter" =~ ^[Yy]$ ]]; then
-    sudo pacman -S --needed --noconfirm curl git unzip xz zip
-
     pushd ~/.local/share
     git clone -b stable https://github.com/flutter/flutter.git
     ./flutter/bin/flutter --version
