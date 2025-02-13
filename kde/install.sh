@@ -185,9 +185,12 @@ mkdir -p ~/.local/share/wallpapers/
 cp -f wallpaper.jpg ~/.local/share/wallpapers/
 
 
+# Install spotify crack
+spotify-launcher --no-exec
+bash <(curl -sSL https://spotx-official.github.io/run.sh)
+
+
 echo "Installazione completata."
-echo "  - Aprire spotify, poi chiuderlo, poi dare il comando \"bash <(curl -sSL https://spotx-official.github.io/run.sh)\""
-echo "    Se non funziona, eseguire lo script \"crack_spotify.sh\""
 echo "  - Imposta il teema Breeze-Dark"
 echo "  - Installa ed imposta il set di icone \"Papirus-Dark\""
 echo "Riavvia per applicare le modifiche."
