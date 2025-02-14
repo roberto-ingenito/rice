@@ -66,10 +66,11 @@ fi
 
 
 # Install AUR packages
-yay -S --rebuildall --rebuildtree --noconfirm \
+yay -S --needed --rebuildall --rebuildtree --noconfirm \
     visual-studio-code-bin \
     google-chrome \
     freeoffice \
+    zapzap \
     plasma6-applets-panel-colorizer \
     kwin-effect-rounded-corners-git
     
