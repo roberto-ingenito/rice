@@ -17,6 +17,7 @@ contrastEnabled=false
 fadedesktopEnabled=true
 glideEnabled[$d]
 magnifierEnabled=true
+minimizeallEnabled=true
 slideEnabled=false
 zoomEnabled=false
 
