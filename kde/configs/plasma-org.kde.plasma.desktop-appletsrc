@@ -24,7 +24,6 @@ DialogWidth=720
 [Containments][2][Applets][4][Configuration][General]
 launchers=preferred://browser,applications:code.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.konsole.desktop
 showOnlyCurrentActivity=false
-showOnlyCurrentDesktop=false
 
 [Containments][2][Applets][78]
 immutability=1

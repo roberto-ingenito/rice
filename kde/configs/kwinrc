@@ -24,6 +24,9 @@ zoomEnabled=false
 [Round-Corners]
 DisableRoundTile=false
 
+[TabBox]
+LayoutName=compact
+
 [Tiling]
 padding=4
 
