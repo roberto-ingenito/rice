@@ -142,9 +142,8 @@ if [[ "$install_flutter" =~ ^[Yy]$ ]]; then
     source ~/.zshenv
 
     # installa ed imposta l'ultima versione di java
-    sudo pacman -S --needed --noconfirm jdk-openjdk
-    LATEST_JAVA=$(ls -d /usr/lib/jvm/*-openjdk | sort -V | tail -n 1)
-    sudo archlinux-java set $(basename $LATEST_JAVA)
+    sudo pacman -S --needed --noconfirm jdk17-openjdk
+    sudo archlinux-java set java-17-openjdk
 
     # accetta tutte le licenze di android
     yes | flutter doctor --android-licenses
