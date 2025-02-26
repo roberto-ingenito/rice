@@ -29,15 +29,3 @@ LayoutName=compact
 
 [Tiling]
 padding=4
-
-[Tiling][2c95023d-574c-5bae-8921-442fbf2c7817]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][52f86715-2d13-5fae-9f88-cf01c8d7102b]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][a7bccd33-ffa2-5d54-b4b3-463165c2219f]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][d4c8908e-3a0a-502f-86cb-750d8023057b]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
