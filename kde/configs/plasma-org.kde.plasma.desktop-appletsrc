@@ -63,7 +63,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][49][Applets][69][Configuration][Appearance]
-customDateFormat=dd/MM/yyyy \s
+customDateFormat=dd/MM/yyyy
 dateDisplayFormat=BesideTime
 dateFormat=custom
 firstDayOfWeek=1
@@ -178,3 +178,4 @@ plugin=org.kde.plasma.mediacontroller
 extraItems=org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.battery
 knownItems=org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.battery
 scaleIconsToFit=true
+shownItems=org.kde.plasma.notifications
