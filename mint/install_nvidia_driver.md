@@ -10,3 +10,5 @@ Inserisci la versione raccomandata
 sudo apt update && sudo apt upgrade -y
 sudo apt install nvidia-driver-<VERSIONE>
 ```
+
+Infine riavvia il pc
