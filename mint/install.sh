@@ -64,8 +64,14 @@ rm ./dotnet-install.sh
 grep -q '/usr/share/dotnet' /etc/environment || sudo sed -i '/^PATH=/ s|"$|:/usr/share/dotnet"|' /etc/environment
 
 
-
-
+#######################
+#### install cider ####
+#######################
+sudo snap install curl
+curl -fsSL https://repo.cider.sh/APT-GPG-KEY | sudo gpg --dearmor -o /usr/share/keyrings/cider-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/cider-archive-keyring.gpg] https://repo.cider.sh/apt stable main" | sudo tee /etc/apt/sources.list.d/cider.list
+sudo apt update
+sudo apt install cider
 
 
 
