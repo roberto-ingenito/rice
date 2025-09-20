@@ -5,6 +5,8 @@ sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt update && sudo apt upgrade
 sudo apt install snapd
 
+
+
 ########################
 #### install chrome ####
 ########################
@@ -16,7 +18,12 @@ rm google-chrome-stable_current_amd64.deb
 sudo snap install code --classic
 sudo snap install brave
 sudo snap install android-studio --classic
- 
+
+
+
+#######################
+#### install latex ####
+#######################
 sudo apt-get install --no-install-recommends \
     texlive-base \
     texlive-bibtex-extra \
@@ -33,9 +40,12 @@ sudo apt-get install --no-install-recommends \
 sudo apt install git
 sudo apt install nodejs npm
 
+
+
 # Set git user
 git config --global user.email "ingenitoroby@gmail.com"
 git config --global user.name "Roberto Ingenito"
+
 
 
 ############################
@@ -51,6 +61,7 @@ git config --global user.name "Roberto Ingenito"
 	&& sudo apt install gh -y
 
 
+
 ######################
 #### install .NET ####
 ######################
@@ -64,6 +75,7 @@ rm ./dotnet-install.sh
 grep -q '/usr/share/dotnet' /etc/environment || sudo sed -i '/^PATH=/ s|"$|:/usr/share/dotnet"|' /etc/environment
 
 
+
 #######################
 #### install cider ####
 #######################
@@ -72,6 +84,7 @@ curl -fsSL https://repo.cider.sh/APT-GPG-KEY | sudo gpg --dearmor -o /usr/share/
 echo "deb [signed-by=/usr/share/keyrings/cider-archive-keyring.gpg] https://repo.cider.sh/apt stable main" | sudo tee /etc/apt/sources.list.d/cider.list
 sudo apt update
 sudo apt install cider
+
 
 
 ########################
@@ -90,6 +103,8 @@ echo \
   $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 
 
